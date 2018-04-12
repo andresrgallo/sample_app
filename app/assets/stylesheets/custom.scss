@@ -20,6 +20,17 @@ $gray-medium-light: #eaeaea;
   margin-top: 45px;
   @include box_sizing;
 }
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -147,6 +158,7 @@ a {
 
 
 
+
 /* sidebar */
 
 aside {
@@ -182,5 +194,4 @@ aside {
 .gravatar_edit {
   margin-top: 15px;
 }
-
 }

@@ -13,6 +13,8 @@ end
 ruby ('2.5.0')
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'jquery-rails'
+gem 'faker'
+gem 'will_paginate'
 gem 'rails', '~> 5.1.6'
 gem 'bcrypt'
 gem 'bootstrap-sass', '~> 3.3.6'
