@@ -59,4 +59,11 @@ end
 test "authenticated? should return false for a user with nil digest" do
   assert_not @user.authenticated?('')
 end
+test "Should delete all posts from User when User is destroyed" do
+  @user.save
+  @user.posts.create(content:"lorem Ipsum")
+  assert_difference 'Post.count', -1 do
+  @user.destroy
+  end
+end
 end

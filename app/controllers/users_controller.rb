@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find(params[:id])
+    @posts = @user.posts.paginate(page: params[:page])
    end
   def new
     @user = User.new
@@ -42,9 +43,7 @@ class UsersController < ApplicationController
       flash[:success] = "User deleted"
       redirect_to users_url
     end
-
-  
-
+    
     
 
   private
@@ -55,14 +54,6 @@ class UsersController < ApplicationController
   end
   # Before filters
 
-    # Confirms a logged-in user.
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
-    end
     # Confirms the correct user.
     def correct_user
       @user = User.find(params[:id])

@@ -7,6 +7,7 @@ end
 
 group :production do
 gem 'pg'
+gem 'fog'
 end
 
 
@@ -15,6 +16,9 @@ ruby ('2.5.0')
 gem 'jquery-rails'
 gem 'faker'
 gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'rails', '~> 5.1.6'
 gem 'bcrypt'
 gem 'bootstrap-sass', '~> 3.3.6'
